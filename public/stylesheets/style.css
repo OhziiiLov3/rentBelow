@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Josefin+Sans&family=Montserrat&family=Raleway&family=Roboto+Slab&family=Roboto:wght@300&family=Russo+One&family=Ysabeau+Infant:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  font-family: "Raleway", cursive;
+  background-color: #faf9f6;
+}
+
+a {
+  color: #faf9f6;
+  text-decoration: none;
+  padding: 0;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #5ab9ea;
+}
+.links{
+   display: flex;
+}
+.links a {
+  text-decoration: none;
+    margin: 0 15px;
+}
+
+.links a:hover{
+  color: #8860D0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+}
+
+main > h1{
+  padding: 30px;
+}
+
+footer{
+  margin-top: auto;
+  text-align: center;
+}
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links {
+        margin-top: 15px;
+    }
+
+    .links a {
+        margin: 0;
+    }
+}
