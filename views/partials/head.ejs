@@ -4,18 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel='stylesheet' href='/stylesheets/style.css' />
+      <script defer src="/javascripts/main.js"></script>
     <title>Rent Below</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-          <img src="/images/Logo2.png" alt="...Logo">
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <span>rentBelow</span>
+                <img class="nav-logo" src="/images/Logo.png" alt="...Logo">
+                <!-- <i class='bx bxs-down-arrow' style="color: #8860D0 ;"></i> -->
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
         </div>
-        <div class="links">
-          <a href="/">Home</a> </li> |
-            <a href="/lisitings">All Listings</a> </li> |
-            <a href="#">Connect</a> </li> 
+        <div class="user">
+            <img class="logo-img" src="/images/Logo2.png" alt="...Logo">
+            <div>
+                <p class="bold">User</p>
+                <p>Admin</p>
+            </div>
         </div>
-    </nav>
+        <ul>
+            <li>
+                   <a href="/">
+                   <i class='bx bx-grid-alt' ></i>
+                    <span class="nav-item">Dashbaord</span>
+                </a> 
+                <span class="tooltip">Dashbaord</span>
+            </li>
+            <li>
+                   <a href="/">
+                   <i class='bx bxs-building-house'></i>
+                    <span class="nav-item">Listings</span>
+                </a> 
+                <span class="tooltip">Listings</span>
+            </li>
+            <li>
+                   <a href="/">
+                   <i class='bx bx-message-square-add'></i>
+                    <span class="nav-item">Rent</span>
+                </a> 
+                <span class="tooltip">Rent</span>
+            </li>
+            <li>
+                   <a href="/">
+                   <i class='bx bx-log-out'></i>
+                    <span class="nav-item">Logout</span>
+                </a> 
+                <span class="tooltip">Logout</span>
+            </li>
+        </ul>
+    </div>
+  <div class="main-content">
+    <div class="container">
+        
+ 
 
 
