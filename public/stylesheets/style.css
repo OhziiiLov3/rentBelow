@@ -24,6 +24,7 @@ body {
 .nav-logo{
   width: 50px;
   border-radius: 50%;
+  margin-left: 5px;
 }
 
 .sidebar{
@@ -57,6 +58,10 @@ body {
   transform: translateX(-50%);
   cursor: pointer;
 }
+
+.top #btn:hover{
+  color: #8860D0;
+}
 .sidebar.active #btn{
   left: 90%;
 }
@@ -66,6 +71,7 @@ body {
   display: flex;
   height:  50px;
   width: 100%;
+  padding: 1rem;
   align-items: center;
   pointer-events: none;
   opacity: 0;
@@ -78,6 +84,8 @@ body {
   font-size: 2rem;
   margin-right: 5px;
 }
+
+
 
 .user{
   display: flex;
@@ -92,7 +100,11 @@ body {
 }
 
 .bold {
-font-weight: 600;
+font-weight: 700;
+}
+
+.email{
+  font-size: .7rem;
 }
 
 .sidebar p {
@@ -154,6 +166,7 @@ font-weight: 600;
   line-height: 1.8rem;
   z-index: 20;
   opacity: 0;
+  background-color: #faf9f6;
 }
 
 .sidebar ul li:hover .tooltip{
@@ -168,7 +181,8 @@ font-weight: 600;
 /* MAIN Content */
 .main-content{
   position: relative;
-  background-color: #DAE2F6;
+  background: rgb(136,96,208);
+background: radial-gradient(circle, rgb(155, 124, 213) 10%, rgba(90,185,234,1) 30%, rgba(132,206,235,1) 40%);
   min-height: 100vh;
   top: 0;
   left: 80px;
@@ -181,12 +195,10 @@ font-weight: 600;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns:  100%;
-
 }
 
-.container .col-1{
 
-}
+
 
 .container .col-2{
   text-align: center;
@@ -194,6 +206,17 @@ font-weight: 600;
   min-height: 85vh;
 }
 
+.hero {
+  padding: 2rem;
+}
+
+.hero-img img{
+  border-radius: 50%;
+  width: 350px;
+  margin-top: 100px;
+  padding: 1rem;
+
+}
 
 
 footer{

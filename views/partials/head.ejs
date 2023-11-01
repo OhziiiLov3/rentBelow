@@ -18,13 +18,22 @@
             </div>
             <i class="bx bx-menu" id="btn"></i>
         </div>
+        <%if (user){ %>
         <div class="user">
-            <img class="logo-img" src="/images/Logo2.png" alt="...Logo">
+            <img class="logo-img" src="<%= user.avatar%>" alt="<%= user.name%>">
             <div>
-                <p class="bold">User</p>
-                <p>Admin</p>
+                <p class="bold"><%= user.name%></p>
+                <p class="email"><strong><%= user.email%></strong></p>
             </div>
         </div>
+        <% } else { %>
+            <div class="user">
+                <img class="logo-img" src="/images/Logo2.png" alt="..Logo">
+                <div>
+                    <p class="bold">Hello</p>
+                </div>
+            </div>
+            <% } %>
         <ul>
             <li>
                    <a href="/">
@@ -62,8 +71,8 @@
                     <span class="nav-item">Login</span>
                 </a> 
                 <span class="tooltip">Login&nbsp;</span>
+                <% } %>
             </li>
-             <% } %>
         </ul>
     </div>
   <div class="main-content">
