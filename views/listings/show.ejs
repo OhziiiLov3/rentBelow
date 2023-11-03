@@ -1,0 +1,18 @@
+<%- include('../partials/head') %>
+
+<section id="show-page">
+  <div>City: </div>
+  <div><%= listing.city %></div>
+  <div>State: </div>
+  <div><%= listing.state %></div>
+  <div>Description: </div>
+  <div><%= listing.description %></div>
+  <div>Pets Allowed: </div>
+  <div><%= listing.isPetAllowed ? 'Yes' : 'No' %></div>
+  <!-- start cast list -->
+</section>
+
+
+
+
+<%- include('../partials/footer') %>

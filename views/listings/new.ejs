@@ -1,0 +1,35 @@
+<%- include('../partials/head') %>
+<div class="newform-container">
+<h1>Add New Unit</h1>
+
+<form id="new-form" action="/listings" method="POST">
+      <label>Upload Image:</label>
+        <input type="text" name="image" >
+  <label>City:</label>
+  <input type="text" name="city">
+  <label>State:</label>
+  <input type="text" name="state">
+  <label>Address:</label>
+  <input type="text" name="address">
+  <label>Rent Amount:</label>
+  <input type="text" name="rentAmount">
+  <label>Bedrooms</label>
+  <select name="bedRoomSize">
+    <option value="1BR">1BR</option>
+    <option value="2BR">2BR</option>
+    <option value="3BR">3BR</option>
+    <option value="4BR">4BR</option>
+  </select>
+  <label>Description:</label>
+     <textarea class="textarea" type="text" name="description" placeholder="Description"></textarea>
+  <label>Pets Allowed</label>
+  <input type="checkbox" name="isPetAllowed" checked>
+  <input type="submit" value="Add Unit">
+</form>
+
+
+</div>
+
+
+
+<%- include('../partials/footer') %>

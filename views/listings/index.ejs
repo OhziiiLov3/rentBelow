@@ -1,0 +1,30 @@
+<%- include('../partials/head') %>
+
+<h1>View All Lisitings</h1>
+
+<table id="list">
+  <thead>
+    <tr>
+      <th>Unit</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Address</th>
+      <th>Rent</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% listings.forEach((l) => { %>
+      <tr>
+        <td><img style="width: 50px; border-radius: 100%; height: auto;" src="<%= l.image%>" alt=""></td>
+        <td><%= l.city %></td>
+        <td><%= l.state %></td>
+        <td><%= l.address %></td>
+        <td><a href="/listings/<%= l._id %>">See More</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+<%- include('../partials/footer') %>
+
