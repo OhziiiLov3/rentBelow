@@ -7,7 +7,8 @@ router.get('/comments/:id/edit', commentsCtrl.edit);
 
 
 
-router.post('/listings/:id/comments', commentsCtrl.create);
+router.post('/comments/:id', commentsCtrl.create);
+router.put('/comments/:id',commentsCtrl.update)
 router.delete('/comments/:id', commentsCtrl.delete)
 
 

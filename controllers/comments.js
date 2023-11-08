@@ -42,6 +42,18 @@ const edit = async (req,res)=>{
     });
 }
 
+const update = async (req,res) =>{
+const listing = await Listing.findOne({ "comments._id": req.params.id });
+const comment = listing.comments.id(req.params.id);
+if(!comment.user.equals(req.user._id)) return res.redirect(`/listings/${listing._id}`)
+comment.content = req.body.content;
+try {
+    await listing.save();
+} catch (err) {
+    console.log(err.message);
+}
+res.redirect(`/listings/${listing._id}`)
+}
 
 
 const deleteComment = async(req,res)=>{
@@ -63,5 +75,6 @@ res.redirect(`/listings/${listing._id}`);
 module.exports  = {
     create,
     delete: deleteComment,
-    edit
+    edit,
+    update
 }
