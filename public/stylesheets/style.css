@@ -14,6 +14,11 @@ body {
   background-color: #faf9f6;
 }
 
+.main-container{
+  display: flex;
+  height: 100vh;
+}
+
 /* SIDERBAR */
 
 .logo-img{
@@ -197,6 +202,7 @@ background: radial-gradient(circle, rgb(155, 124, 213) 10%, rgba(90,185,234,1) 3
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns:  100%;
+  height: 100vh;
 }
 
 
@@ -262,7 +268,7 @@ table thead th {
 }
 
 table td {
-  padding: 10px;
+  padding: 1px;
   text-align: center;
 }
 
@@ -287,8 +293,11 @@ table td {
 
 #show-page {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 100px;
+  padding-bottom: 2rem;
+  /* height: 100vh; */
+  padding-bottom: 2rem;
 }
 
 #show-page div:nth-child(even) {
@@ -305,10 +314,33 @@ table td {
   font-weight: bold;
 }
 
+#add-review-form {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+    
+}
 
+#add-review-form input[type="submit"] {
+  width: 6rem;
+  grid-column: 2 / 3;
+} 
+
+.review-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-user img {
+  border-radius: 50%;
+  height: 40px;
+}
 
 footer{
   text-align: center;
+  margin-top: auto;
 }
 
 

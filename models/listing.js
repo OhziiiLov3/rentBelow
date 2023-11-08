@@ -2,6 +2,32 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
+
+const commentsSchema = new Schema(
+  {
+    content: {
+      type: String,
+      required: true,
+    },
+    rating: {
+      type: Number,
+      min: 1,
+      max: 5,
+      default: 5,
+    },
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    userName: String,
+    userAvatar: String,
+  },
+  {
+    timestamps: true,
+  }
+);
+
 const listingSchema = new Schema(
   {
     city: {
@@ -35,9 +61,11 @@ const listingSchema = new Schema(
     },
     image: {
       type: String,
-      required: [true, " You must provide Image of aProperty"],
+      required: [true, " You must provide Image of a Property"],
     },
+    comments: [commentsSchema],
   },
+
   {
     timestamps: true,
   }

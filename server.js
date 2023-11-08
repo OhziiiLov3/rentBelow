@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
+const methodOverride = require("method-override");
 require('dotenv').config()
 
 require('./config/database');
@@ -12,7 +13,8 @@ require("./config/passport");
 
 
 var indexRouter = require('./routes/index');
-var listingsRouter = require('./routes/listings');
+const listingsRouter = require('./routes/listings');
+const commentsRouter = require('./routes/comments');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -26,6 +28,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride("_method"));
+
 
 // Mount Session Middleware
 app.use(session({
@@ -46,6 +50,7 @@ app.use( (req, res, next) => {
 
 app.use('/', indexRouter);
 app.use('/listings', listingsRouter);
+app.use('/', commentsRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

@@ -1,0 +1,11 @@
+<%- include('../partials/head') %>
+
+<h1><%=title %></h1>
+
+<form action="/comments/<%= comment._id %>?_method=PUT" method="POST">
+  <input name="text" value="<%= comment.content %>">
+  <button type="submit">Edit COMMENT</button>
+</form>
+
+
+<%- include('../partials/footer') %>

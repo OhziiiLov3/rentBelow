@@ -18,7 +18,6 @@ const newListing = (req, res)=>{
 
 const show = async(req,res)=>{
     const listing = await Listing.findById(req.params.id);
-    console.log(listing);
     res.render('listings/show',{
         listing,
         title: "Detail Page"
@@ -30,7 +29,7 @@ const create = async(req, res)=>{
 req.body.isPetAllowed = !!req.body.isPetAllowed;
 try {
     const listing = await Listing.create(req.body);
-    res.redirect('/listings');
+    res.redirect(`/listings/${listing._id}`);
 } catch (error) {
     console.log(error);
     res.render('listings/new');
